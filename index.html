@@ -13,9 +13,9 @@
 
 <body>
   <div class="container">
-  <!----> <audio controls="false" hidden autoplay loop>
+  <!-- <audio controls="false" hidden autoplay loop>
       <source src="Birthday-Song.mp3" type="audio/mp3" />
-    </audio> 
+    </audio> -->
     <!-- <audio src="Birthday-Song.mp3" type="audio/mp3" hidden="true" loop="true" autostart="true" autoplay="true"></audio>
     -->
     <div class="one">
@@ -116,7 +116,19 @@
     </div>
   </div>
 </body>
-
+<!-- Background audio -->
+    <audio id="birthday-audio" autoplay loop>
+        <source src="Birthday-Song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <script>
+        // Ensure the audio plays automatically even if the user hasn't interacted
+        window.addEventListener('load', () => {
+            const audio = document.getElementById('birthday-audio');
+            audio.play();
+        });
+    </script>
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
 <script type="text/babel" src="script/main.js"></script>
