@@ -304,3 +304,8 @@ const resolveFetch = () => {
 };
 
 resolveFetch().then(animationTimeline());
+
+window.addEventListener('load', () => {
+            const audio = document.getElementById('birthday-audio');
+            audio.play();
+        });
